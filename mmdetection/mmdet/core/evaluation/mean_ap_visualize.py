@@ -341,7 +341,7 @@ def map_roc_pr(det_results,
 
     label_names = get_classes(dataset) 
     #------------plot PR / F-measure-----------#
-    plt.figure(figsize=(6, 10))
+    plt.figure(figsize=(15, 20))
     #------------plot curve--------------------#
     for i in range(num_classes):
         plt.subplots_adjust(hspace=0.3)
@@ -352,7 +352,7 @@ def map_roc_pr(det_results,
         plt.xlabel('Recall')
         plt.ylabel('Precision')
         plt.axis([0, 1, 0, 1])
-        plt.legend()
+        plt.legend(loc='lower left', fontsize = 8)
         
         plt.subplot(212)
         plt.title('F-measure')
@@ -360,6 +360,7 @@ def map_roc_pr(det_results,
         for a, b in zip(label_names, f_measure_list):
             plt.text(a, b, '%.4f' % b, color='black', fontweight='bold') 
     
+    fig.tight_layout()
     plt.savefig('PR_Curve_each_class.png')
     plt.show() 
  
