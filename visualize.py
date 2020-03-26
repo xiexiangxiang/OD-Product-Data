@@ -49,6 +49,7 @@ class visualize_mmdetection():
         self.loss_cls = list(OrderedDict.fromkeys(self.loss_cls))
         self.loss = list(OrderedDict.fromkeys(self.loss))
         self.acc = list(OrderedDict.fromkeys(self.acc))
+        print(self.loss_rpn_cls)
 
     def show_chart(self):
         plt.rcParams.update({'font.size': 15})
@@ -69,8 +70,8 @@ class visualize_mmdetection():
         plt.subplot(326, title='accuracy', ylabel='accuracy')
         plt.plot(self.acc)
         plt.suptitle((sys.argv[1][5:] + "\n training result"), fontsize=30)
-        plt.show()
         plt.savefig((sys.argv[1][5:] + '_result.png'))
+        plt.show()
 
 
 if __name__ == '__main__':
