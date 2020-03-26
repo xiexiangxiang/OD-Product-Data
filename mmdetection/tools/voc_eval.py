@@ -28,10 +28,10 @@ def voc_eval(result_file, dataset, iou_thr=0.5):
         gt_labels.append(labels)
     if not gt_ignore:
         gt_ignore = gt_ignore
-    if hasattr(dataset, 'year') and dataset.year == 2007:
-        dataset_name = 'voc07'
-    else:
-        dataset_name = dataset.CLASSES
+    # if hasattr(dataset, 'year') and dataset.year == 2007:
+    #     dataset_name = 'voc07'
+    # else:
+    #     dataset_name = dataset.CLASSES
     eval_map(
         det_results,
         gt_bboxes,
@@ -39,6 +39,7 @@ def voc_eval(result_file, dataset, iou_thr=0.5):
         gt_ignore=gt_ignore,
         scale_ranges=None,
         iou_thr=iou_thr,
+        dataset_name = dataset.CLASSES,
         dataset=dataset_name,
         print_summary=True)
 
