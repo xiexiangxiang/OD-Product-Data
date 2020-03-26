@@ -359,8 +359,9 @@ def map_roc_pr(det_results,
         plt.bar(label_names[i], f_measure_list[i])
         for a, b in zip(label_names, f_measure_list):
             plt.text(a, b, '%.4f' % b, color='black', fontweight='bold') 
-    plt.show() 
+    
     plt.savefig('PR_Curve_each_class.png')
+    plt.show() 
  
     if scale_ranges is not None:
         # shape (num_classes, num_scales)
