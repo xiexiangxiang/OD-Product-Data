@@ -354,7 +354,7 @@ def map_roc_pr(det_results,
         for a, b in zip(label_names, f_measure_list):
             plt.text(a, b, '%.4f' % b, color='black', fontweight='bold') 
     plt.show() 
-    plt.savefig('PR_Curve_each_class.png')
+    plt.savefig('/mmdetection/mmdet/core/evaluation/PR_Curve_each_class.png')
  
     if scale_ranges is not None:
         # shape (num_classes, num_scales)
