@@ -1,6 +1,11 @@
 import mmcv
 import numpy as np
 import matplotlib.pyplot as plt
+from IPython import get_ipython
+try:
+    get_ipython().magic("matplotlib inline")
+except:
+    plt.ion()
 from terminaltables import AsciiTable
 
 from .bbox_overlaps import bbox_overlaps
