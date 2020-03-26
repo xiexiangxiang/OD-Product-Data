@@ -341,7 +341,7 @@ def map_roc_pr(det_results,
 
     label_names = get_classes(dataset) 
     #------------plot PR / F-measure-----------#
-    plt.figure(figsize=(8, 15))
+    plt.figure(figsize=(12, 15))
     #------------plot curve--------------------#
     for i in range(num_classes):
         plt.subplots_adjust(hspace=0.3)
