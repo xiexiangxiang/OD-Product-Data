@@ -360,7 +360,7 @@ def map_roc_pr(det_results,
         for a, b in zip(label_names, f_measure_list):
             plt.text(a, b, '%.4f' % b, color='black', fontweight='bold') 
     
-    fig.tight_layout()
+    plt.figure().tight_layout()
     plt.savefig('PR_Curve_each_class.png')
     plt.show() 
  
