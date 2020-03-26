@@ -352,13 +352,13 @@ def map_roc_pr(det_results,
         plt.xlabel('Recall')
         plt.ylabel('Precision')
         plt.axis([0, 1, 0, 1])
-        plt.legend(loc='lower left', fontsize = 8)
+        plt.legend(loc='lower left', fontsize = 10)
         
         plt.subplot(212)
         plt.title('F-measure')
-        plt.bar(label_names[i], f_measure_list[i])
+        plt.bar(label_names[i], f_measure_list[i], orientation = 'vertical')
         for a, b in zip(label_names, f_measure_list):
-            plt.text(a, b, '%.4f' % b, color='black', fontweight='bold', fontsize = 8) 
+            plt.text(a, b, '%.4f' % b, color='black', fontsize = 10) 
     
     # plt.figure().tight_layout()
     plt.savefig('PR_Curve_each_class.png')
