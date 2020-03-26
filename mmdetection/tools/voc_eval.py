@@ -40,7 +40,6 @@ def voc_eval(result_file, dataset, iou_thr=0.5):
         scale_ranges=None,
         iou_thr=iou_thr,
         dataset_name = dataset.CLASSES,
-        dataset=dataset_name,
         print_summary=True)
 
 
