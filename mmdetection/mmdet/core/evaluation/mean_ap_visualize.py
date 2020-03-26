@@ -341,7 +341,7 @@ def map_roc_pr(det_results,
 
     label_names = get_classes(dataset) 
     #------------plot PR / F-measure-----------#
-    plt.figure(figsize=(15, 20))
+    plt.figure(figsize=(10, 16))
     #------------plot curve--------------------#
     for i in range(num_classes):
         plt.subplots_adjust(hspace=0.3)
@@ -356,7 +356,8 @@ def map_roc_pr(det_results,
         
         plt.subplot(212)
         plt.title('F-measure')
-        plt.bar(label_names[i], f_measure_list[i], orientation = 'vertical')
+        plt.bar(label_names[i], f_measure_list[i])
+        plt.xticks(rotation=90)
         for a, b in zip(label_names, f_measure_list):
             plt.text(a, b, '%.4f' % b, color='black', fontsize = 10) 
     
