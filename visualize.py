@@ -49,7 +49,7 @@ class visualize_mmdetection():
         self.loss_cls = list(OrderedDict.fromkeys(self.loss_cls))
         self.loss = list(OrderedDict.fromkeys(self.loss))
         self.acc = list(OrderedDict.fromkeys(self.acc))
-        print(self.loss_rpn_cls)
+        
 
     def show_chart(self):
         plt.rcParams.update({'font.size': 15})
