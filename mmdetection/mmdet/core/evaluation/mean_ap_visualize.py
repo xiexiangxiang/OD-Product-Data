@@ -320,7 +320,7 @@ def map_roc_pr(det_results,
         recall_list.append(recalls)
         precision_list.append(precisions)
         ap_list.append(ap)
-        print(recall_list)
+        
 
         
 
